@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Cta from '../../components/Cta.astro';
+import Img from '../../components/Img.astro';
+import { services, areas } from '../../data/content';
+const base = import.meta.env.BASE_URL;
+const schema = [{ '@context': 'https://schema.org', '@type': 'Service', name: 'Residential Drain Cleaning in Medina, Ohio', provider: { '@type': 'Plumber', name: 'Medina Hydro Jetting Pros' }, areaServed: 'Medina County, Ohio' }];
+---
+<Base title="Residential Drain Cleaning Medina OH | Medina Hydro Jetting Pros" description="Hydro jetting for kitchen lines, laundry lines, and main sewer laterals in Medina, Ohio homes. Camera inspection before and after." path="services/residential-drain-cleaning/" schema={schema}>
+  <Hero eyebrow="Service 02" title="Residential Drain Cleaning in Medina, Ohio" lead="Slow sinks, gurgling lines, and mains that back up every few months. We jet the line back to full diameter and show you the result on camera." location="Residential Drain Cleaning" />
+  <section><div class="wrap split">
+    <div><p class="eyebrow">What this covers</p><h2>Home lines, cleaned to the wall.</h2>
+      <p>Household drains collect grease, soap, lint, scale, and roots a little at a time. By the time a line backs up, the pipe has often been narrowing for years. Snaking opens a channel. Jetting removes the buildup that made the channel necessary.</p>
+      <p>We start with a camera so you know what is in the pipe, set the nozzle and pressure for the pipe material, and finish with a second camera pass.</p>
+      <ul class="ticks"><li>Kitchen and laundry line jetting</li><li>Main line root and scale removal</li><li>Whole-home slow-drain diagnostics</li></ul></div>
+    <Img k="drain" eager cap="Fig. 01 · Residential line work" />
+  </div></section>
+  <section class="alt"><div class="wrap">
+    <div class="head"><p class="eyebrow">Signs it is time</p><h2>When a home line needs jetting.</h2></div>
+    <div class="grid g3">
+      <div class="card"><h3>Repeat clogs</h3><p>The same drain clears and slows again within weeks or months. That points to buildup on the wall, not a one-time blockage.</p></div>
+      <div class="card"><h3>Gurgling and slow fixtures</h3><p>Noise from drains and several fixtures slowing at once often means the main line is narrowed.</p></div>
+      <div class="card"><h3>Backups at the lowest drain</h3><p>A basement floor drain or lowest tub backing up is a classic sign of a restricted main lateral.</p></div>
+    </div>
+    <p style="margin-top:22px">Not sure if it is a drain or the main? Describe it on the form and we will help you sort it out. Related: <a href={base + 'services/sewer-camera-inspection/'} style="color:var(--acc)">sewer camera inspection</a>.</p>
+  </div></section>
+  <Cta />
+</Base>

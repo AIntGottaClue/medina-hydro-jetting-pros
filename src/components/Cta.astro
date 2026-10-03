@@ -1,0 +1,11 @@
+---
+import { siteConfig as c } from '../data/siteConfig';
+const base = import.meta.env.BASE_URL;
+---
+<section class="cta">
+  <div class="wrap">
+    <p class="eyebrow">Ready when the line isn't</p>
+    <h2>Water moves fast. So do blockages.</h2>
+    <div class="cta-row"><a class="btn" href={'tel:' + c.phoneHref}>Call {c.phoneDisplay}</a><a class="btn btn-ghost" href={base + 'contact/'}>Request Service</a></div>
+  </div>
+</section>

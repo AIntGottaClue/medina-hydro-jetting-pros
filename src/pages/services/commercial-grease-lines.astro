@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Cta from '../../components/Cta.astro';
+import Img from '../../components/Img.astro';
+import { services, areas } from '../../data/content';
+const base = import.meta.env.BASE_URL;
+const schema = [{ '@context': 'https://schema.org', '@type': 'Service', name: 'Commercial and Grease Lines in Medina, Ohio', provider: { '@type': 'Plumber', name: 'Medina Hydro Jetting Pros' }, areaServed: 'Medina County, Ohio' }];
+---
+<Base title="Commercial Grease Line Jetting Medina OH | Medina Hydro Jetting Pros" description="Scheduled hydro jetting for restaurant grease lines, floor drains, and mop sink lines in Medina, Ohio." path="services/commercial-grease-lines/" schema={schema}>
+  <Hero eyebrow="Service 03" title="Commercial and Grease Line Jetting in Medina, Ohio" lead="Restaurants and commercial kitchens need lines that stay open. We jet grease lines on a schedule so a backup does not pick the busiest hour." location="Commercial and Grease Lines" />
+  <section><div class="wrap split">
+    <div><p class="eyebrow">What this covers</p><h2>Keep kitchen lines open.</h2>
+      <p>Grease cools as it travels down a line and sticks to the wall. Layer by layer it narrows the pipe until flow stops. Jetting strips the layers off instead of poking through them.</p>
+      <p>Scheduled visits keep lines clear before they become an emergency. Frequency depends on what the camera shows, not on a fixed calendar.</p>
+      <ul class="ticks"><li>Grease-laden kitchen lines</li><li>Floor drains and mop sink lines</li><li>Recurring maintenance programs</li></ul></div>
+    <Img k="commercial" eager cap="Fig. 01 · Commercial line access" />
+  </div></section>
+  <section class="alt"><div class="wrap">
+    <div class="head"><p class="eyebrow">Who we work with</p><h2>Built for working kitchens.</h2></div>
+    <div class="grid g3">
+      <div class="card"><h3>Restaurants and cafes</h3><p>Kitchen lines, prep sink lines, and floor drains cleared on a schedule that fits your closing time.</p></div>
+      <div class="card"><h3>Facilities and shared buildings</h3><p>Shared drain lines in multi-tenant and commercial buildings, jetted and documented on camera.</p></div>
+      <div class="card"><h3>Recurring programs</h3><p>If the camera shows grease returning fast, we set a maintenance interval around that, so you are not guessing.</p></div>
+    </div>
+    <p style="margin-top:22px">Your grease interceptor, if you have one, is a separate item for a licensed hauler. We clean the lines. See also <a href={base + 'services/sewer-camera-inspection/'} style="color:var(--acc)">sewer camera inspection</a>.</p>
+  </div></section>
+  <Cta />
+</Base>

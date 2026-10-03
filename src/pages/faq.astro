@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Cta from '../components/Cta.astro';
+import { faqs } from '../data/content';
+import { siteConfig as c } from '../data/siteConfig';
+const base = import.meta.env.BASE_URL;
+const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
+const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: ph(a) } })) }];
+---
+<Base title="Hydro Jetting FAQ | Medina Hydro Jetting Pros, Medina, Ohio" description="Straight answers about hydro jetting pressure, roots, pipe safety, and grease lines for Medina, Ohio property owners." path="faq/" schema={schema}>
+  <Hero eyebrow="Straight Answers" title="Hydro Jetting Questions, Answered" lead="Pressure ratings, root cutting, pipe safety, grease lines: straight answers to the questions Medina property owners ask about hydro jetting." chips={['Jetting vs. Snaking', 'PSI', 'Roots', 'Grease']} location="FAQ" />
+  <section><div class="wrap prose-wide">
+    <div class="faq" style="max-width:860px">{faqs.map(([q, a], i) => <details open={i === 0}><summary>{q}</summary><p>{ph(a)}</p></details>)}</div>
+    <div class="card" style="max-width:860px;margin-top:30px"><h3>Still deciding between jetting and snaking?</h3><p>Read how the technology works, or send the form above with what your line is doing.</p><a class="more" href={base + 'hydro-jetting/'}>How hydro jetting works</a></div>
+  </div></section>
+  <Cta />
+</Base>

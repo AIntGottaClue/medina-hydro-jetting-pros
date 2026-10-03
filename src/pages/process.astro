@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Cta from '../components/Cta.astro';
+import Img from '../components/Img.astro';
+const stages = [
+  ['01', 'Inspect', 'Every job starts with eyes inside the line. A sewer camera shows what is actually causing the problem (roots, grease, scale, a sag, or a break) so nothing downstream is guesswork.'],
+  ['02', 'Calibrate', 'Pressure and nozzle selection are matched to the pipe: its material, diameter, and condition. A fragile line and a clay main full of roots are two very different jobs, and the equipment is set accordingly.'],
+  ['03', 'Scour', 'The jetter runs the line end to end. Rear-facing jets pull the hose forward while the stream strips buildup off the walls and flushes the debris out of the line.'],
+  ['04', 'Verify', 'The camera runs again after the jet. You see the cleaned line yourself. That footage is the proof the job is done, not a promise that it is.'],
+];
+---
+<Base title="Our 4-Stage Hydro Jetting Process | Medina Hydro Jetting Pros" description="Inspect, calibrate, scour, verify. The four-stage hydro jetting protocol used on every line in Medina, Ohio." path="process/">
+  <Hero eyebrow="The Protocol" title="Our 4-Stage Jetting Process" lead="No guesswork. Every job follows the same four-stage protocol: inspect, calibrate, scour, verify. Here is exactly what happens when we jet a line in Medina, Ohio." chips={['Inspect', 'Calibrate', 'Scour', 'Verify']} location="Our Process" />
+  <section><div class="wrap grid g2">
+    {stages.map(([n, t, d]) => <div class="card"><div class="step">{n}</div><h3>{t}</h3><p>{d}</p></div>)}
+  </div></section>
+  <section class="alt"><div class="wrap split">
+    <div><p class="eyebrow">Why the order matters</p><h2>The camera is the contract.</h2>
+      <p>Jetting without a camera is pressure without information. Inspecting first keeps fragile pipe safe, and verifying after turns "we cleared it" into "watch the footage."</p>
+      <p>That is why the same four stages run on every line in Medina, whether it is a residential lateral or a commercial grease run.</p></div>
+    <Img k="valve" eager cap="Fig. 01 · Stage 03, mid-scour" />
+  </div></section>
+  <Cta />
+</Base>

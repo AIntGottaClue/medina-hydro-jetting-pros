@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Cta from '../components/Cta.astro';
+import Img from '../components/Img.astro';
+import { services, process, areas, faqs } from '../data/content';
+import { siteConfig as c } from '../data/siteConfig';
+const base = import.meta.env.BASE_URL;
+const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
+const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.slice(0, 4).map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: ph(a) } })) }];
+---
+<Base title="Medina Hydro Jetting Pros | High-Pressure Sewer & Drain Cleaning in Medina, OH" description="Specialized 4000 PSI hydro jetting and sewer line cleaning in Medina, Ohio. High-pressure drain scouring, commercial grease line clearing, and pipe camera inspection." path="" schema={schema}>
+  <Hero eyebrow="Medina, Ohio · Hydro Jetting Only" title="High-Pressure Hydro Jetting in Medina, Ohio" lead="Medina Hydro Jetting Pros does one thing: high-pressure water jetting. We scour grease, scale, sludge, and tree roots out of drain and sewer lines across Medina, Ohio, and verify every line on camera." chips={['Up to 4000 PSI', 'Residential & Commercial', 'Camera Verified']} location="Homepage" />
+  <section><div class="wrap split">
+    <div>
+      <p class="eyebrow">Why jetting · Why only jetting</p>
+      <h2>One service. Total focus. Clean lines.</h2>
+      <p>Most drain companies jet a line the way they snake one: in and out, hole punched, gone. Medina Hydro Jetting Pros is built around a single discipline, restoring pipe interiors to full diameter with high-pressure water.</p>
+      <p>That focus shows up in the equipment, the nozzle selection, and the camera work that proves the line is clean before we pack up.</p>
+      <ul class="ticks"><li>Grease, sludge, and soap scum stripped from pipe walls</li><li>Tree roots cut and flushed out of the line</li><li>Camera inspection before and after the jet</li></ul>
+      <a class="btn btn-ghost" href={base + 'hydro-jetting/'}>Explore the technology</a>
+    </div>
+    <Img k="valve" cap="Fig. 01 · Pressure at the nozzle" />
+  </div></section>
+  <section class="alt"><div class="wrap">
+    <div class="head"><p class="eyebrow">What we clear</p><h2>Four applications. One discipline.</h2></div>
+    <div class="grid g4">{services.map((s) => <a class="card" href={base + s.path}><h3>{s.name}</h3><p>{s.blurb}</p><span class="more">Learn more</span></a>)}</div>
+  </div></section>
+  <section><div class="wrap">
+    <div class="head"><p class="eyebrow">The protocol</p><h2>Every job, four stages.</h2></div>
+    <div class="grid g4">{process.map((p) => <div class="card"><div class="step">{p.n}</div><h3>{p.t}</h3><p>{p.d}</p></div>)}</div>
+    <p style="margin-top:24px"><a class="btn btn-ghost" href={base + 'process/'}>See the full process</a></p>
+  </div></section>
+  <section class="alt"><div class="wrap split">
+    <div>
+      <p class="eyebrow">Coverage</p><h2>Medina and the towns around it.</h2>
+      <p>We jet lines in the city of Medina and across nearby communities. Each area has its own page with what we see there.</p>
+      <ul class="towns">{areas.map((a) => <li><a href={base + 'service-areas/' + a.slug + '/'}>{a.name}</a></li>)}</ul>
+    </div>
+    <Img k="underground" cap="Medina County, Ohio" />
+  </div></section>
+  <section><div class="wrap">
+    <div class="head"><p class="eyebrow">Quick answers</p><h2>Asked in Medina every week.</h2></div>
+    <div class="faq">{faqs.slice(0, 4).map(([q, a], i) => <details open={i === 0}><summary>{q}</summary><p>{ph(a)}</p></details>)}</div>
+    <p><a class="btn btn-ghost" href={base + 'faq/'}>Read every answer</a></p>
+  </div></section>
+  <Cta />
+</Base>

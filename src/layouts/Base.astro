@@ -1,0 +1,100 @@
+---
+import '../styles/global.css';
+import { siteConfig as c } from '../data/siteConfig';
+import { services, areas } from '../data/content';
+export interface Props { title: string; description: string; path: string; schema?: object[]; noindex?: boolean }
+const { title, description, path, schema = [], noindex = false } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const url = (p: string) => base + p;
+const canonical = c.origin + '/' + path;
+const nav = [['Home', ''], ['Hydro Jetting', 'hydro-jetting/'], ['Services', 'services/'], ['Our Process', 'process/'], ['Service Areas', 'service-areas/'], ['FAQ', 'faq/'], ['Contact', 'contact/']];
+const isActive = (p: string) => (p === '' ? path === '' : path.startsWith(p));
+const business = {
+  '@context': 'https://schema.org', '@type': 'Plumber', name: c.brand, url: c.origin + '/', telephone: c.phoneHref,
+  areaServed: areas.map((a) => ({ '@type': 'City', name: a.name + ', Ohio' })),
+  description: 'High-pressure hydro jetting and sewer camera inspection in Medina, Ohio.',
+};
+const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={ph(description)} />
+  <link rel="canonical" href={canonical} />
+  <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={ph(description)} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  <meta name="theme-color" content="#0B0F17" />
+  <link rel="icon" type="image/svg+xml" href={url('favicon.svg')} />
+  <link rel="preload" href={url('fonts/SpaceGroteskVariable-300-700.woff2')} as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href={url('fonts/DMSansVariable-100-1000.woff2')} as="font" type="font/woff2" crossorigin />
+  <style is:global set:html={`@font-face{font-family:"Space Grotesk";font-weight:300 700;font-display:swap;src:url(${base}fonts/SpaceGroteskVariable-300-700.woff2) format("woff2")}@font-face{font-family:"DM Sans";font-weight:100 1000;font-display:swap;src:url(${base}fonts/DMSansVariable-100-1000.woff2) format("woff2")}@font-face{font-family:"IBM Plex Mono";font-weight:400;font-display:swap;src:url(${base}fonts/IBMPlexMono-400.woff2) format("woff2")}`} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify([business, ...schema])} />
+  {c.ga4MeasurementId && (<>
+    <script is:inline async src={'https://www.googletagmanager.com/gtag/js?id=' + c.ga4MeasurementId}></script>
+    <script is:inline define:vars={{ id: c.ga4MeasurementId }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',id);</script>
+  </>)}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href={url('')} aria-label={c.brand + ' home'}>
+        <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11Z" fill="#38BDF8"/></svg></span>
+        <span class="brand-text"><b>{c.shortName}</b><i>Hydro Jetting Pros</i></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        {nav.map(([label, p]) => {
+          if (label === 'Services') return (
+            <div class="dd"><a class:list={[{ active: isActive(p) }]} href={url(p)}>Services</a>
+              <div class="dd-menu">{services.map((s) => <a href={url(s.path)}>{s.name}</a>)}</div></div>);
+          if (label === 'Service Areas') return (
+            <div class="dd"><a class:list={[{ active: isActive(p) }]} href={url(p)}>Service Areas</a>
+              <div class="dd-menu cols">{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</div></div>);
+          return <a class:list={[{ active: isActive(p) }]} href={url(p)}>{label}</a>;
+        })}
+      </nav>
+      <div class="bar-cta">
+        <a class="phone" href={'tel:' + c.phoneHref}><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>{c.phoneDisplay}</span></a>
+        <a class="btn btn-sm" href={url('contact/')}>Request Service</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-panel" data-mobile hidden>
+      <div class="wrap">
+        {nav.map(([label, p]) => <a href={url(p)}>{label}</a>)}
+        <details><summary>Services</summary>{services.map((s) => <a href={url(s.path)}>{s.name}</a>)}</details>
+        <details><summary>Service areas</summary>{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</details>
+        <a class="btn" href={'tel:' + c.phoneHref}>Call {c.phoneDisplay}</a>
+      </div>
+    </div>
+  </header>
+  <main><slot /></main>
+  <footer class="site-footer">
+    <div class="wrap fgrid">
+      <div>
+        <a class="brand" href={url('')}><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11Z" fill="#38BDF8"/></svg></span><span class="brand-text"><b>{c.shortName}</b><i>Hydro Jetting Pros</i></span></a>
+        <p>Specialized high-pressure hydro jetting drain and sewer line cleaning for residential and commercial properties in Medina, Ohio.</p>
+      </div>
+      <div><h4>Services</h4>{services.map((s) => <a href={url(s.path)}>{s.name}</a>)}<a href={url('process/')}>Our Process</a></div>
+      <div><h4>Service Areas</h4>{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</div>
+      <div><h4>Contact</h4><a href={'tel:' + c.phoneHref}>{c.phoneDisplay}</a><span>Medina, Ohio</span><a href={url('faq/')}>FAQ</a><a href={url('contact/')}>Request service</a></div>
+    </div>
+    <div class="wrap legal"><span>&copy; 2026 {c.brand}. All rights reserved.</span><span><a href={url('privacy/')}>Privacy</a> <a href={url('terms/')}>Terms</a></span></div>
+  </footer>
+  <a class="sticky-call" href={'tel:' + c.phoneHref} data-phone aria-label={'Call ' + c.brand + ' at ' + c.phoneDisplay}>
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+    <span>{c.phoneDisplay}</span>
+  </a>
+  <script is:inline defer src={url('lead-form.js')}></script>
+  <script is:inline defer data-tracking-id={c.airchattyTrackingId} src="https://api.airchatty.com/js/external-tracking.js"></script>
+  <script is:inline>
+    (function(){var b=document.querySelector('[data-burger]'),m=document.querySelector('[data-mobile]');if(!b)return;
+    b.addEventListener('click',function(){var o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',String(o));});})();
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Cta from '../../components/Cta.astro';
+import Img from '../../components/Img.astro';
+import { services, areas } from '../../data/content';
+const base = import.meta.env.BASE_URL;
+const schema = [{ '@context': 'https://schema.org', '@type': 'Service', name: 'Sewer Camera Inspection in Medina, Ohio', provider: { '@type': 'Plumber', name: 'Medina Hydro Jetting Pros' }, areaServed: 'Medina County, Ohio' }];
+---
+<Base title="Sewer Camera Inspection Medina OH | Medina Hydro Jetting Pros" description="Camera inspection before and after hydro jetting in Medina, Ohio. See roots, scale, breaks, and low spots in your line." path="services/sewer-camera-inspection/" schema={schema}>
+  <Hero eyebrow="Service 04" title="Sewer Camera Inspection in Medina, Ohio" lead="A camera shows what the line is actually doing. We run it before the jet to plan the work and after to prove the result." location="Sewer Camera Inspection" />
+  <section><div class="wrap split">
+    <div><p class="eyebrow">What this covers</p><h2>Eyes inside the line.</h2>
+      <p>Roots, scale, a belly where water pools, a break: the camera tells us what the line needs and where. It also tells us when jetting is the wrong tool, for example when a pipe section has collapsed.</p>
+      <p>After the jet, the camera runs again. The before and after footage is the difference between hoping a line is clean and knowing it is.</p>
+      <ul class="ticks"><li>Pre-jet condition assessment</li><li>Root, break, and belly location</li><li>Post-jet verification footage</li></ul></div>
+    <Img k="inspect" eager cap="Fig. 01 · Eyes inside the line" />
+  </div></section>
+  <section class="alt"><div class="wrap">
+    <div class="head"><p class="eyebrow">What the footage shows</p><h2>Findings that change the plan.</h2></div>
+    <div class="grid g3">
+      <div class="card"><h3>Roots and scale</h3><p>How far roots reach and how thick the scale is decides the nozzle and pressure.</p></div>
+      <div class="card"><h3>Bellies and low spots</h3><p>A sag that holds water explains repeat clogs. Jetting clears the debris, but the sag remains, and you should know that.</p></div>
+      <div class="card"><h3>Breaks and collapses</h3><p>If the pipe is broken, we tell you before we put pressure on it. Repair is a different trade.</p></div>
+    </div>
+    <p style="margin-top:22px">Camera work comes with every job, and pairs with <a href={base + 'hydro-jetting/'} style="color:var(--acc)">hydro jetting</a> and <a href={base + 'services/residential-drain-cleaning/'} style="color:var(--acc)">residential drain cleaning</a>.</p>
+  </div></section>
+  <Cta />
+</Base>

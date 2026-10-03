@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Cta from '../components/Cta.astro';
+import Img from '../components/Img.astro';
+const base = import.meta.env.BASE_URL;
+---
+<Base title="Hydro Jetting Specialists Medina OH | Medina Hydro Jetting Pros" description="How 4000 PSI hydro jetting works and what it removes. Scour tree roots, heavy grease, and scale from pipes in Medina, Ohio." path="hydro-jetting/">
+  <Hero eyebrow="The Technology" title="What Is Hydro Jetting?" lead="A 4000 PSI stream of water, a specialized nozzle, and nothing left behind. Here is how hydro jetting restores pipes in Medina, Ohio, and why it outperforms snaking." chips={['Full-Diameter Cleaning', 'Root & Grease Removal', 'Camera Verified']} location="Hydro Jetting" />
+  <section><div class="wrap">
+    <div class="head"><p class="eyebrow">How it works</p><h2>Water, doing the work of a blade.</h2>
+    <p>Hydro jetting feeds a high-pressure hose into the line from a cleanout or drain opening. Water leaves the nozzle at pressures a drain cable can't match, cutting through the blockage and scrubbing the pipe wall as the hose advances.</p></div>
+    <div class="grid g3">
+      <div class="card"><h3>The Pump</h3><p>A dedicated jetting unit pushes water at up to 4000 PSI, enough force to cut roots and strip hardened grease without touching the pipe itself.</p></div>
+      <div class="card"><h3>The Nozzle</h3><p>Rear-facing jets pull the hose down the line while forward ports break up the blockage. The water does the work, wall to wall.</p></div>
+      <div class="card"><h3>The Proof</h3><p>A camera runs the line after the jet. A full-diameter clean is not a claim. It is footage you can watch.</p></div>
+    </div>
+  </div></section>
+  <section class="alt"><div class="wrap split">
+    <div><p class="eyebrow">The target list</p><h2>What jetting removes.</h2>
+      <ul class="ticks"><li><b>Grease and sludge.</b> Hardened kitchen grease and years of soap scum, emulsified and flushed out.</li><li><b>Tree roots.</b> Root intrusions cut through and scoured off the pipe wall, not just trimmed back.</li><li><b>Mineral scale.</b> Hard-water scale and rust buildup that narrows older lines, stripped to the wall.</li><li><b>Sand and sediment.</b> Silt and grit settled in low spots, lifted and carried out of the line.</li></ul></div>
+    <Img k="jet" eager cap="Fig. 02 · The line, opened up" />
+  </div></section>
+  <section><div class="wrap">
+    <div class="head"><p class="eyebrow">The comparison</p><h2>Jetting vs. snaking.</h2></div>
+    <div class="cmp">
+      <div class="card"><h3>Snaking</h3><ul class="ticks"><li>Bores a small hole through the clog</li><li>Leaves buildup clinging to the walls</li><li>The line re-narrows as debris collects again</li></ul></div>
+      <div class="card good"><h3>Hydro Jetting</h3><ul class="ticks"><li>Scours the full diameter of the pipe</li><li>Strips grease, scale, and roots off the wall</li><li>Result verified on camera before we leave</li></ul></div>
+    </div>
+    <p style="margin-top:22px">See the individual services: <a href={base + 'services/residential-drain-cleaning/'} style="color:var(--acc)">residential drain cleaning</a>, <a href={base + 'services/commercial-grease-lines/'} style="color:var(--acc)">commercial and grease lines</a>, and <a href={base + 'services/sewer-camera-inspection/'} style="color:var(--acc)">sewer camera inspection</a>.</p>
+  </div></section>
+  <Cta />
+</Base>

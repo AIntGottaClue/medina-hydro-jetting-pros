@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import Img from '../components/Img.astro';
+import { siteConfig as c } from '../data/siteConfig';
+---
+<Base title="Privacy Policy | Medina Hydro Jetting Pros" description="How Medina Hydro Jetting Pros handles the information you submit through this website." path="privacy/">
+  <section><div class="wrap prose">
+    <p class="eyebrow">Legal</p><h1 style="font-size:2.4rem;margin-bottom:24px">Privacy Policy</h1>
+    <Img k="network" eager cls="" />
+    <h2>What we collect</h2>
+    <p>When you send a service request, we collect the details you enter: your name, phone number, email address, and a description of your drain or sewer problem. We also record which page of the site you used to reach us.</p>
+    <h2>How we use it</h2>
+    <p>We use your information to respond to your request, to schedule service, and to follow up about it. We do not sell your information.</p>
+    <h2>Analytics and tracking</h2>
+    <p>This site uses a form-tracking script to record submitted requests and may use analytics to understand how visitors use the site. These tools can set cookies or collect device and browser information.</p>
+    <h2>Phone calls</h2>
+    <p>When you call the number on this site, we may keep a record of the call, such as its time and the caller number, to manage requests.</p>
+    <h2>Your choices</h2>
+    <p>You can ask us to update or remove the information you submitted by calling <a href={'tel:' + c.phoneHref} style="color:var(--acc)">{c.phoneDisplay}</a>.</p>
+    <h2>Changes</h2>
+    <p>We may update this policy from time to time. The current version is always on this page.</p>
+  </div></section>
+</Base>

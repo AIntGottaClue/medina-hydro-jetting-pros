@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Cta from '../../components/Cta.astro';
+import Img from '../../components/Img.astro';
+import { services } from '../../data/content';
+const base = import.meta.env.BASE_URL;
+const pics = ['jet', 'drain', 'commercial', 'inspect'];
+const extra = [
+  ['Main sewer laterals and interior drain lines', 'Recurring maintenance jetting for problem lines', 'Post-jet camera verification on every line'],
+  ['Kitchen and laundry line jetting', 'Main line root and scale removal', 'Whole-home slow-drain diagnostics'],
+  ['Grease-laden kitchen lines', 'Floor drains and mop sink lines', 'Recurring maintenance programs'],
+  ['Pre-jet condition assessment', 'Root, break, and belly location', 'Post-jet verification footage'],
+];
+const text = [
+  'The core of everything we do. A high-pressure hose and nozzle assembly runs the full length of the line, scouring the pipe wall clean instead of punching a temporary hole through the clog.',
+  'A slow kitchen sink, a gurgling laundry line, a main that backs up every few months. Residential lines collect grease, soap, scale, and roots year after year. Jetting resets the line to full diameter.',
+  'Restaurants and commercial kitchens push grease through their lines every day. Left alone, it hardens, narrows the line, and eventually closes it, usually during a rush.',
+  'Every jetting decision starts with what the camera sees. Roots, scale, a belly, a break: the footage tells us what the line needs and where.',
+];
+---
+<Base title="Hydro Jetting Plumbing Services Medina OH | Residential & Commercial" description="Hydro jetting services in Medina, Ohio: residential drain cleaning, commercial grease lines, and sewer camera inspection." path="services/">
+  <Hero eyebrow="One Specialization · Four Applications" title="Hydro Jetting Services in Medina, Ohio" lead="Residential drains, commercial grease lines, and sewer mains across Medina, Ohio, cleaned to full diameter with high-pressure water and verified on camera." chips={['Homes', 'Restaurants', 'Facilities']} location="Services" />
+  {services.map((s, i) => (
+    <section class={i % 2 === 0 ? '' : 'alt'}><div class={'wrap split' + (i % 2 ? ' rev' : '')}>
+      <div><p class="eyebrow">Service 0{i + 1}</p><h2>{s.name}</h2><p>{text[i]}</p>
+        <ul class="ticks">{extra[i].map((t) => <li>{t}</li>)}</ul>
+        <a class="btn btn-ghost" href={base + s.path}>View this service</a></div>
+      <Img k={pics[i]} cap={'Fig. 0' + (i + 1)} />
+    </div></section>
+  ))}
+  <Cta />
+</Base>
