@@ -9,7 +9,7 @@ export const siteConfig = {
   phoneDisplay: '(877) 761-0283',
   phoneHref: '+18777610283',
   airchattyTrackingId: 'tk_61d238e145314251999b74fdd5c953cf',
-  ga4MeasurementId: '',
+  ga4MeasurementId: 'G-93FKHCV35F',
   origin: 'https://medinahydrojetting.prosapp.site',
   formSiteName: 'Medina Hydro Jetting Pros',
 } as const;
