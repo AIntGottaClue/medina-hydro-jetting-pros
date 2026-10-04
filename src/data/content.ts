@@ -1,13 +1,23 @@
 export const images = {
-  network: { f: '23fa53cf', alt: 'Clean industrial pipe network on a structural wall' },
-  valve: { f: 'f240e413', alt: 'High-pressure water burst from a jetting valve' },
-  jet: { f: '1ef32499', alt: 'High-pressure water jet in use' },
-  junction: { f: 'affe4d15', alt: 'Industrial pipe junction on brick architecture' },
-  drain: { f: 'a9ff76d5', alt: 'Technician working on a drain line inside a wall' },
-  commercial: { f: '0eddb674', alt: 'Commercial facility piping and conduit runs' },
-  inspect: { f: '46d7ba08', alt: 'Technician examining mechanical utility lines' },
-  underground: { f: '335b5501', alt: 'Underground sewer pipe junction' },
-  whitepipe: { f: '3155335c', alt: 'Clean white drain pipe detail' },
+  jet: { f: 'jetting-nozzle-spray', alt: 'Hydro jetting nozzle spraying high-pressure water' },
+  valve: { f: 'nozzle-in-pipe', alt: 'High-pressure jetting nozzle firing inside a pipe' },
+  network: { f: 'clean-pipe-bore', alt: 'Looking down a scoured, clean pipe toward daylight' },
+  junction: { f: 'multi-port-nozzle', alt: 'Multi-port jetting nozzle spraying water around a pipe bore' },
+  drain: { f: 'residential-cleanout-jetting', alt: 'Technician feeding a jetting hose into a home cleanout' },
+  commercial: { f: 'grease-trap-cleanout', alt: 'Technician jetting a grease line through a commercial kitchen cleanout' },
+  inspect: { f: 'camera-inspection-tablet', alt: 'Technician watching a sewer camera feed on a tablet' },
+  underground: { f: 'root-cutting', alt: 'Jetting nozzle cutting tree roots out of a buried pipe' },
+  whitepipe: { f: 'scoured-pipe-view', alt: 'View through a freshly jetted pipe' },
+  grease: { f: 'grease-buildup', alt: 'Jet nozzle clearing grease buildup in a commercial kitchen line' },
+  yard: { f: 'yard-root-jetting', alt: 'Technician jetting a root-blocked lateral in a residential yard' },
+  scale: { f: 'scale-removal', alt: 'Jet nozzle scouring scale off a heavily corroded pipe' },
+  pump: { f: 'jetter-at-cleanout', alt: 'Technician running a jetter hose into a cleanout beside a house' },
+  sweep: { f: 'clean-sweep', alt: 'Nozzle pulling back through a clean white drain line' },
+  reel: { f: 'hose-reel-jetter', alt: 'Technician at a hose-reel jetter next to a cleanout' },
+  rootmacro: { f: 'roots-in-line', alt: 'Jet nozzle spraying through roots inside a sewer pipe' },
+  macro: { f: 'nozzle-scale-macro', alt: 'Jetting nozzle spraying inside a scale-lined pipe' },
+  beforeafter: { f: 'before-after-line', alt: 'A clogged pipe end beside the same pipe scoured clean' },
+  blueprint: { f: 'jet-spray-pattern', alt: 'Jetting nozzle throwing a ring of spray inside a pipe' },
 };
 
 export const services = [
@@ -38,7 +48,7 @@ export const process = [
 
 export const areas = [
   {
-    slug: 'medina', name: 'Medina', kind: 'City', image: 'junction',
+    slug: 'medina', name: 'Medina', kind: 'City', image: 'blueprint',
     short: 'Full hydro jetting coverage across the city, from the square to the edge of town.',
     h1: 'Hydro Jetting in Medina, Ohio',
     intro: 'Medina is the Medina County seat, and the lines under it range from older homes close to the square to newer subdivisions toward the edges of town. We jet the drain and sewer lines serving both, and verify every one on camera.',
@@ -54,7 +64,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'brunswick', name: 'Brunswick', kind: 'City', image: 'valve',
+    slug: 'brunswick', name: 'Brunswick', kind: 'City', image: 'yard',
     short: 'Residential and commercial jetting along the I-71 corridor north of Medina.',
     h1: 'Hydro Jetting in Brunswick, Ohio',
     intro: 'Brunswick sits just north of Medina along I-71. It is a large residential city with plenty of single-family neighborhoods and a busy commercial strip, so we see both kitchen-line grease problems and root-filled laterals.',
@@ -70,7 +80,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'wadsworth', name: 'Wadsworth', kind: 'City', image: 'jet',
+    slug: 'wadsworth', name: 'Wadsworth', kind: 'City', image: 'scale',
     short: 'High-pressure line cleaning for homes and businesses in Wadsworth.',
     h1: 'Hydro Jetting in Wadsworth, Ohio',
     intro: 'Wadsworth is a city west of Medina with a mix of long-established neighborhoods and newer homes. Older lines tend to collect scale and roots, so a camera pass before jetting matters here.',
@@ -86,7 +96,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'montville-township', name: 'Montville Township', kind: 'Township', image: 'drain',
+    slug: 'montville-township', name: 'Montville Township', kind: 'Township', image: 'pump',
     short: 'Jetting for township properties on septic-connected and municipal lines.',
     h1: 'Hydro Jetting in Montville Township, Ohio',
     intro: 'Montville Township covers a mix of properties, and drainage setups vary from one street to the next. Some homes connect to sewer and some rely on septic systems, so the first question on any call is where your line goes.',
@@ -102,7 +112,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'granger-township', name: 'Granger Township', kind: 'Township', image: 'whitepipe',
+    slug: 'granger-township', name: 'Granger Township', kind: 'Township', image: 'sweep',
     short: 'Root and scale removal for newer and established neighborhoods in Granger Township.',
     h1: 'Hydro Jetting in Granger Township, Ohio',
     intro: 'Granger Township has both newer developments and long-established properties. Newer lines mostly fail from grease and debris. Older ones add roots and scale to the list.',
@@ -118,7 +128,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'litchfield', name: 'Litchfield', kind: 'Township', image: 'commercial',
+    slug: 'litchfield', name: 'Litchfield', kind: 'Township', image: 'reel',
     short: 'Rural and residential line scouring across Litchfield.',
     h1: 'Hydro Jetting in Litchfield, Ohio',
     intro: 'Litchfield is a rural township area southwest of Medina. Properties tend to have longer runs, larger lots, and a mix of sewer and septic setups, so we start every job by working out how your line is laid out.',
@@ -134,7 +144,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'chippewa-lake', name: 'Chippewa Lake', kind: 'Village', image: 'inspect',
+    slug: 'chippewa-lake', name: 'Chippewa Lake', kind: 'Village', image: 'rootmacro',
     short: 'Drain and sewer jetting for lake-area properties around Chippewa Lake.',
     h1: 'Hydro Jetting in Chippewa Lake, Ohio',
     intro: 'Chippewa Lake is a small lake community, and many properties are on compact lots with older plumbing. Short, tight lines with older pipe call for careful pressure, and the camera tells us what the pipe can take.',
@@ -150,7 +160,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'seville', name: 'Seville', kind: 'Village', image: 'network',
+    slug: 'seville', name: 'Seville', kind: 'Village', image: 'macro',
     short: 'Full-diameter pipe cleaning a short run west of Medina.',
     h1: 'Hydro Jetting in Seville, Ohio',
     intro: 'Seville is a village a short drive west of Medina. Many homes are older, with their original plumbing, and small businesses sit along the village center. Both do well with a camera-first approach.',
@@ -166,7 +176,7 @@ export const areas = [
     ],
   },
   {
-    slug: 'valley-city', name: 'Valley City', kind: 'Community', image: 'underground',
+    slug: 'valley-city', name: 'Valley City', kind: 'Community', image: 'beforeafter',
     short: 'Camera inspection and jetting for the Liverpool Township area around Valley City.',
     h1: 'Hydro Jetting in Valley City, Ohio',
     intro: 'Valley City is an unincorporated community in Liverpool Township, in the northeast corner of Medina County. We jet drain and sewer lines for homes and businesses across the area.',

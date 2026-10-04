@@ -22,7 +22,7 @@ const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
   <section class="alt"><div class="wrap split">
     <div><p class="eyebrow">Good to know</p><h2>Before you call.</h2><p>{a.note}</p>
       <p>Our services in {a.name}: {services.map((s, i) => <><a href={base + s.path} style="color:var(--acc)">{s.name}</a>{i < services.length - 1 ? ', ' : '.'}</>)}</p></div>
-    <Img k={a.image} cap={`${a.name}, Ohio`} />
+    <Img k={a.image} cap="Camera-verified jetting" />
   </div></section>
   <section><div class="wrap">
     <div class="head"><p class="eyebrow">Local questions</p><h2>{a.name} questions.</h2></div>
