@@ -51,6 +51,13 @@ p{margin:0 0 16px;color:#cbd5e1}
 .prose{max-width:760px}.prose h2{font-size:1.4rem;margin-top:30px}
 .site-footer{border-top:1px solid var(--line);background:#080b12;padding-top:56px}.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px}.site-footer h4{font-size:.8rem;font-family:"IBM Plex Mono";letter-spacing:.18em;color:var(--acc);margin-bottom:14px}.site-footer a,.site-footer span{display:block;color:#a5b4c8;font-size:.92rem;padding:3px 0}.site-footer a:hover{color:#fff}.site-footer p{font-size:.9rem;color:#94a3b8;margin-top:14px}
 .legal{display:flex;justify-content:space-between;gap:14px;border-top:1px solid #16213a;margin-top:40px;padding-top:20px;padding-bottom:26px}.legal span,.legal a{display:inline;font-size:.82rem}.legal a{margin-left:14px}
-.sticky-call{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:8px;background:var(--acc);color:#04111c;font-weight:700;padding:13px 20px;border-radius:999px;box-shadow:0 6px 24px #0008}
+/* Persistent call CTA: moving phone icon and a sweeping highlight. */
+.sticky-call{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;align-items:center;gap:8px;background:var(--acc);color:#04111c;font-weight:700;padding:13px 20px;border-radius:999px;box-shadow:0 6px 24px #0008;overflow:hidden;isolation:isolate}
+.sticky-call::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.68) 48%,rgba(255,255,255,.18) 54%,transparent 72%);transform:translateX(-130%);animation:stickyShimmer 2.6s ease-in-out infinite}
+.sticky-call>svg,.sticky-call>span{position:relative;z-index:1}
+.sticky-call>svg{transform-origin:50% 55%;animation:stickyPhoneShake 2.8s ease-in-out infinite}
+@keyframes stickyShimmer{0%{transform:translateX(-130%)}55%,100%{transform:translateX(130%)}}
+@keyframes stickyPhoneShake{0%,72%,100%{transform:rotate(0)}77%{transform:rotate(-12deg)}82%{transform:rotate(12deg)}87%{transform:rotate(-10deg)}92%{transform:rotate(10deg)}97%{transform:rotate(0)}}
+@media(prefers-reduced-motion:reduce){.sticky-call::before,.sticky-call>svg{animation:none}}
 @media(max-width:1100px){.nav,.phone{display:none}.burger{display:flex}}@media(max-width:960px){.hero-grid,.split{grid-template-columns:1fr;gap:34px}.split.rev>:first-child{order:0}.g3,.g4{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}.hero{padding:48px 0}section{padding:60px 0}}
 @media(max-width:600px){.g2,.g3,.g4,.cmp,.fgrid{grid-template-columns:1fr}.bar-cta .btn-sm{display:none}.legal{flex-direction:column}.legal a{margin:0 14px 0 0}}
