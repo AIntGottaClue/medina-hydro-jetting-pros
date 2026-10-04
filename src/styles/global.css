@@ -61,3 +61,11 @@ p{margin:0 0 16px;color:#cbd5e1}
 @media(prefers-reduced-motion:reduce){.sticky-call::before,.sticky-call>svg{animation:none}}
 @media(max-width:1100px){.nav,.phone{display:none}.burger{display:flex}}@media(max-width:960px){.hero-grid,.split{grid-template-columns:1fr;gap:34px}.split.rev>:first-child{order:0}.g3,.g4{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr 1fr}.hero{padding:48px 0}section{padding:60px 0}}
 @media(max-width:600px){.g2,.g3,.g4,.cmp,.fgrid{grid-template-columns:1fr}.bar-cta .btn-sm{display:none}.legal{flex-direction:column}.legal a{margin:0 14px 0 0}}
+
+/* Success replaces the form only after a confirmed tracker response. */
+[data-lead-form][hidden],.lead-success[hidden]{display:none!important}
+.lead-success{outline:none;text-align:center}
+.lead-success svg{display:block;margin:0 auto 20px;color:#16a34a}
+.lead-success h2{font-size:clamp(24px,4vw,32px);font-weight:700;line-height:1.2;margin:0 0 20px}
+.lead-success p{line-height:1.65;margin:0 auto 24px;max-width:34em}
+.lead-success .lead-success__again{background:none;border:0;border-radius:0;padding:0;margin-top:8px;font:inherit;font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
