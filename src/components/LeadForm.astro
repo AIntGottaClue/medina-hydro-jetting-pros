@@ -6,12 +6,13 @@ const { location = 'Homepage', id = 'lead' } = Astro.props;
   <p class="eyebrow">Request Service</p>
   <h2 class="form-title">Tell us what your line is doing.</h2>
   <form data-lead-form id={'form-' + id} name={'medina-' + id}>
-    <input class="hp" aria-hidden="true" name="hsp_site" readonly tabindex="-1" type="text" value={c.formSiteName} />
-    <input class="hp" aria-hidden="true" name="hsp_location" readonly tabindex="-1" type="text" value={location} />
+    <input class="hp" aria-hidden="true" name="page_site" readonly tabindex="-1" type="text" value={c.formSiteName} />
+    <input class="hp" aria-hidden="true" name="page_code" readonly tabindex="-1" type="text" value="HSP" />
+    <input class="hp" aria-hidden="true" name="page_location" readonly tabindex="-1" type="text" value={location} />
     <label>Your name<input autocomplete="name" name="full_name" required placeholder="Enter your full name" /></label>
     <label>Phone number<input autocomplete="tel" name="phone" required type="tel" placeholder="(555) 555-5555" /></label>
     <label>Email address<input autocomplete="email" name="email" type="email" placeholder="name@example.com" /></label>
-    <label>What is happening?<textarea name="hsp_details" required placeholder="Describe the backup, blockage, or slow line."></textarea></label>
+    <label>What is happening?<textarea name="page_details" required placeholder="Describe the backup, blockage, or slow line."></textarea></label>
     <label class="hp" aria-hidden="true">Leave this blank<input autocomplete="off" name="website" tabindex="-1" /></label>
     <button class="btn btn-block" type="submit">Send Service Request</button>
     <div aria-live="polite" role="status" class="form-status"></div>

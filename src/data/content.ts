@@ -20,7 +20,8 @@ export const images = {
   blueprint: { f: 'jet-spray-pattern', alt: 'Jetting nozzle throwing a ring of spray inside a pipe' },
 };
 
-export const services = [
+import core from './corePages.json';
+const baseServices = [
   {
     slug: 'hydro-jetting', name: 'Hydro Jetting', path: 'hydro-jetting/',
     blurb: 'High-pressure scouring that strips buildup off pipe walls instead of poking a hole through it.',
@@ -39,6 +40,9 @@ export const services = [
   },
 ];
 
+export const coreServices = core.services.map((x) => ({ slug: x.slug, name: x.name, path: `services/${x.slug}/`, blurb: x.lead }));
+export const guides = core.guides.map((x) => ({ slug: x.slug, name: x.name, path: `guides/${x.slug}/`, blurb: x.lead }));
+export const services = [...baseServices, ...coreServices];
 export const process = [
   { n: '01', t: 'Inspect', d: 'A camera runs the line first, so the plan matches the actual problem.' },
   { n: '02', t: 'Calibrate', d: "Nozzle and pressure are matched to the pipe's material and condition." },

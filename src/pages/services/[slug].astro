@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import Cta from '../../components/Cta.astro';
+import Img from '../../components/Img.astro';
+import core from '../../data/corePages.json';
+import { services, guides } from '../../data/content';
+const base = import.meta.env.BASE_URL;
+export function getStaticPaths() { return core.services.map((x, i) => ({ params: { slug: x.slug }, props: { x, i } })); }
+const { x, i } = Astro.props;
+const path = 'services/' + x.slug + '/';
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'Service', ...({ name: x.name + ' in Medina, Ohio', provider: { '@type': 'Plumber', name: 'Medina Hydro Jetting Pros' }, areaServed: 'Medina County, Ohio' }) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: x.faqs.map(([q, a]: string[]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+];
+---
+<Base title={x.name + ' Medina OH | Medina Hydro Jetting Pros'} description={x.lead} path={path} schema={schema}>
+  <Hero eyebrow={'Service 0' + (i + 6)} title={x.name + ' in Medina, Ohio'} lead={x.lead} location={x.name} />
+  {x.blocks.map(([h, ...ps]: string[], n: number) => (
+    <section class={n % 2 ? 'alt' : ''}><div class={'wrap split' + (n % 2 ? ' rev' : '')}>
+      <div><p class="eyebrow">{'Part 0' + (n + 1)}</p><h2>{h}</h2>{ps.map((t) => <p>{t}</p>)}</div>
+      {n === 0 && <Img k={x.img} cap={'Fig. 0' + (i + 1)} />}
+    </div></section>
+  ))}
+  <section class="alt"><div class="wrap">
+    <div class="head"><p class="eyebrow">Questions</p><h2>{x.name}: common questions.</h2></div>
+    <div class="faq" style="max-width:860px">{x.faqs.map(([q, a]: string[], n: number) => <details open={n === 0}><summary>{q}</summary><p>{a}</p></details>)}</div>
+    <p style="margin-top:22px">More on this site: <a href={base + 'services/'} style="color:var(--acc)">all services</a>, <a href={base + 'hydro-jetting/'} style="color:var(--acc)">hydro jetting</a>, <a href={base + 'guides/hydro-jetting-vs-snaking/'} style="color:var(--acc)">hydro jetting vs snaking</a>.</p>
+  </div></section>
+  <Cta />
+</Base>
