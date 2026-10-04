@@ -15,7 +15,7 @@ const schema = [
 ];
 ---
 <Base title={x.name + ' Medina OH | Medina Hydro Jetting Pros'} description={x.lead} path={path} schema={schema}>
-  <Hero eyebrow={'Service 0' + (i + 6)} title={x.name + ' in Medina, Ohio'} lead={x.lead} location={x.name} />
+  <Hero eyebrow={'Service 0' + (i + 5)} title={x.name + ' in Medina, Ohio'} lead={x.lead} location={x.name} />
   {x.blocks.map(([h, ...ps]: string[], n: number) => (
     <section class={n % 2 ? 'alt' : ''}><div class={'wrap split' + (n % 2 ? ' rev' : '')}>
       <div><p class="eyebrow">{'Part 0' + (n + 1)}</p><h2>{h}</h2>{ps.map((t) => <p>{t}</p>)}</div>
