@@ -163,7 +163,7 @@ export const areas = [
     slug: "seville", name: "Seville", kind: "Village", image: "macro",
     short: "Camera inspection and jetting in a village due south of Medina.",
     h1: "Hydro Jetting in Seville, Ohio",
-    intro: "Seville is a village of 2,335 people in the south of Medina County, about seven miles directly south of the city of Medina. It was platted in 1828 and got a post office in 1830,. A wastewater treatment plant owned by Medina County sits on Kennard Road in the village.",
+    intro: "Seville is a village of 2,335 people in the south of Medina County, about seven miles directly south of the city of Medina. It was platted in 1828 and got a post office in 1830. A wastewater treatment plant owned by Medina County sits on Kennard Road in the village.",
     local: [
       ["Older homes near the center", "Homes platted in the 1800s can have original or early replacement laterals with decades of scale. We film first and set the pressure for what the pipe can take."],
       ["Small businesses in the village center", "Cafes and shops share lines that clog with grease and debris. We clear floor drains, mop sink lines, and kitchen lines."],
