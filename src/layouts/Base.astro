@@ -61,7 +61,7 @@ const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
       <div class="bar-cta">
         <a class="phone" href={'tel:' + c.phoneHref}><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span>{c.phoneDisplay}</span></a>
         <a class="btn btn-sm" href={url('contact/')}>Request Service</a>
-        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" data-burger><span></span><span></span><span></span></button>
+        <button class="burger" type="button" aria-label="Toggle navigation" aria-expanded="false" data-burger><svg class="mobile-menu-hamburger" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18" /></svg><svg class="mobile-menu-x" aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18" /></svg></button>
       </div>
     </div>
     <div class="mobile-panel" data-mobile hidden>
@@ -98,3 +98,17 @@ const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
   </script>
 </body>
 </html>
+
+<style is:global>
+/* Mobile menu sits above fixed call CTAs. Icons track aria-expanded. */
+header:has([aria-expanded="true"]){z-index:2001!important}
+.mobile-menu-x{display:none!important}
+[aria-expanded="true"]>.mobile-menu-hamburger{display:none!important}
+[aria-expanded="true"]>.mobile-menu-x{display:block!important}
+.mobile-menu-hamburger,.mobile-menu-x{flex:none;vertical-align:middle}
+button[data-menu-toggle],button[data-menu],button[data-burger],button[data-mobile-menu],button.menu{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+button[data-menu-toggle]:focus-visible,button[data-menu]:focus-visible,button[data-mobile-menu]:focus-visible,button[data-burger]:focus-visible,button.menu:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.mobile-nav,.sat-mobile-panel,#mobile-menu,.mobile-panel{max-height:calc(100dvh - 100px);overflow-y:auto;overscroll-behavior:contain}
+@media(max-width:1100px){header:has([aria-expanded="true"]){position:sticky;top:0}}
+
+</style>
