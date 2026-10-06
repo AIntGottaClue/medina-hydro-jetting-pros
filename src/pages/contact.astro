@@ -10,8 +10,8 @@ const base = import.meta.env.BASE_URL;
 <Base title="Contact Medina Hydro Jetting Pros | Medina, Ohio" description={`Call ${c.phoneDisplay} or send the request form for hydro jetting service in Medina, Ohio.`} path="contact/">
   <Hero eyebrow="Direct Dispatch Line" title="Contact Medina Hydro Jetting Pros" lead="Tell us what is happening, whether slow drains, recurring backups, or gurgling lines, and we will take it from there. Call or send the form." chips={['Phone', 'Online Form']} location="Contact" />
   <section><div class="wrap split">
-    <div><p class="eyebrow">Where we work</p><h2>Medina, Ohio and the towns around it.</h2>
-      <p>Medina and the surrounding communities, from Brunswick to Valley City.</p>
+    <div><p class="eyebrow">Where we work</p><h2>Medina, Ohio neighborhoods.</h2>
+      <p>Medina, from the Public Square Historic District to Medfair Heights.</p>
       <ul class="towns">{areas.map((a) => <li><a href={base + 'service-areas/' + a.slug + '/'}>{a.name}</a></li>)}</ul>
       <p style="margin-top:22px">The fastest way to reach us is by phone: <a href={'tel:' + c.phoneHref} style="color:var(--acc);font-family:'IBM Plex Mono';font-weight:700">{c.phoneDisplay}</a></p></div>
     <Img k="jet" eager cap="High-pressure jetting" />

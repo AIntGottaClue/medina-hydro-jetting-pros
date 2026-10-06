@@ -1,0 +1,682 @@
+[
+ {
+  "slug": "public-square",
+  "name": "Public Square Historic District",
+  "title": "Hydro Jetting at Public Square, Medina OH | Medina Hydro Jetting Pros",
+  "description": "Hydro jetting for Medina's Public Square Historic District: storefronts, restaurants and upper floor apartments. Call (877) 761-0283.",
+  "hero": "Hydro jetting around Medina's Public Square can clear grease, scale and roots from the drain lines of brick storefronts, restaurants and apartments above them. The district was rebuilt in brick after an 1870 fire, so most buildings carry more than a century of plumbing changes. A camera look at the line first shows what it is made of.",
+  "bodyH2": "Hydro Jetting for Public Square Buildings",
+  "bodyPs": [
+   "The Main Street Medina [[historic district walking tour|https://www.mainstreetmedina.com/uploads/1/2/3/0/12308576/medina_historic_district_walking_tour_2018.pdf]] explains that Elijah Boardman set aside land in 1817 for a county seat around Public Square, that fires struck in 1848 and 1870, and that the 1870 fire pushed the downtown to rebuild in brick. The district was later restored and listed on the National Register, with overlay zoning created in the early 1990s.",
+   "The [[City of Medina's preservation brochure|https://medinaoh.org/wp-content/uploads/2025/03/Brochure-Architectural-Review-and-Historic-Preservation-in-Medina-Ohio.pdf]] says properties in the Public Square Historic District must receive a Certificate of Appropriateness before any work that may change the exterior of a structure or site. Cleaning inside a drain does not change the exterior, but excavation to reach or repair a line can, so it is worth confirming first.",
+   "The National Park Service record for the [[Medina Public Square Historic District|https://npgallery.nps.gov/AssetDetail/NRIS/75001483]] lists Greek Revival, Second Empire and Italianate styles, a reminder of how many eras of building share this square. Each era left its own plumbing."
+  ],
+  "considerations": [
+   "Which tenants or floors share the line",
+   "Whether a grease trap or interceptor serves a kitchen",
+   "Basement or rear cleanouts, which may be hard to reach",
+   "Past renovations that added restrooms or kitchens",
+   "Whether the owner or manager must approve work",
+   "Whether any excavation could alter the exterior and need city review"
+  ],
+  "svcH2": "Hydro Jetting Services for Public Square Historic District Properties",
+  "svcLead": "Pick the page that matches what your drain is doing.",
+  "svc": {
+   "severe-grease-and-sludge": "Restaurants around the square can build film on their lines, as {{svc:severe-grease-and-sludge|severe grease and sludge}} explains.",
+   "tree-root-intrusions": "Street trees along the square can reach old laterals, covered in {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "For lines that keep slowing, see {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}}.",
+   "mineral-and-scale-deposits": "Scale in older pipe is described in {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "Businesses that cannot afford a mid-service backup can read {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up in Public Square Historic District",
+  "apps": [
+   {
+    "h": "Restaurants and food businesses",
+    "p": "Kitchens put fats and solids into drains. The kitchen branch is usually the first to slow."
+   },
+   {
+    "h": "Apartments above storefronts",
+    "p": "A shared stack means a low blockage shows on the lowest floor first. Naming affected floors helps."
+   },
+   {
+    "h": "Rebuilt-in-brick buildings",
+    "p": "Buildings put up after the 1870 fire have been altered many times since. Basement drains and wall penetrations may reflect different eras."
+   },
+   {
+    "h": "Basement floor drains",
+    "p": "A floor drain that backs up first points to the main line."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations in Public Square Historic District",
+  "implPs": [
+   "A few questions are worth settling before the visit."
+  ],
+  "impl": [
+   {
+    "h": "Pipe condition",
+    "p": "A camera shows whether the line is sound.",
+    "b": [
+     "Request a camera look",
+     "Share repair notes",
+     "Plan repair if damage is found"
+    ]
+   },
+   {
+    "h": "Scheduling and access",
+    "p": "Choose a time that keeps customers clear of the work area, and confirm who can approve access in a shared building.",
+    "b": [
+     "Choose a slow period",
+     "Tell staff where the cleanout is",
+     "Confirm owner approval"
+    ]
+   },
+   {
+    "h": "Public or private",
+    "p": "Cleaning a private line cannot repair a public sewer.",
+    "b": [
+     "Ask neighbors about the same backup",
+     "Note rain timing",
+     "Report widespread backups to the city"
+    ]
+   }
+  ],
+  "planH2": "How a Public Square Historic District Visit Is Planned",
+  "planPs": [
+   "The order of a visit is simple."
+  ],
+  "steps": [
+   {
+    "t": "Describe the problem",
+    "d": "List the fixtures affected and when it began."
+   },
+   {
+    "t": "Find access",
+    "d": "Locate the cleanout or floor drain."
+   },
+   {
+    "t": "Inspect",
+    "d": "A camera shows the pipe and what is in it."
+   },
+   {
+    "t": "Clean",
+    "d": "Jet with a nozzle and pressure that fit the pipe."
+   },
+   {
+    "t": "Review",
+    "d": "Look again and decide on repair or a return visit."
+   }
+  ],
+  "mapH2": "Public Square Historic District on the Map",
+  "mapIntro": "The map shows the area for orientation only. It does not mark a business or define neighborhood boundaries.",
+  "map": {
+   "lat": 41.1386,
+   "lon": -81.8626,
+   "d": 0.012,
+   "label": "Area map near Public Square, Medina, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.87820%2C41.12660%2C-81.84700%2C41.15060&layer=mapnik"
+  },
+  "nearbyH2": "Other Medina Neighborhoods",
+  "nearbyP": "These pages cover the rest of the city.",
+  "faqs": [
+   {
+    "q": "Does the historic district review drain cleaning?",
+    "a": "The city reviews exterior changes. Cleaning inside a pipe is not an exterior change, but digging can be."
+   },
+   {
+    "q": "Can a restaurant line be cleaned after hours?",
+    "a": "Ask when you call so access can be arranged."
+   },
+   {
+    "q": "Is hydro jetting safe on older pipe?",
+    "a": "On sound pipe it can be. A damaged section should be assessed first."
+   },
+   {
+    "q": "Will cleaning repair a broken pipe?",
+    "a": "No. Repair is separate."
+   },
+   {
+    "q": "Why does my basement drain back up first?",
+    "a": "It sits at the low point of the system."
+   },
+   {
+    "q": "Could the problem be the public sewer?",
+    "a": "If neighbors see the same backup, it may be. If only your property is affected, start with the private line."
+   },
+   {
+    "q": "What does a camera inspection show?",
+    "a": "Pipe material, joints, roots, deposits and damage."
+   },
+   {
+    "q": "How often should I clean?",
+    "a": "It depends on the cause."
+   },
+   {
+    "q": "Will one cleaning stop the problem for good?",
+    "a": "It clears the buildup present at that visit. Whether it returns depends on the cause."
+   },
+   {
+    "q": "What should I have ready?",
+    "a": "Your address, the affected fixtures, when it began and any repair notes."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting Near Public Square",
+  "ctaPs": [
+   "Describe the symptoms and anything you know about the line.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Medina County",
+  "city": "Medina",
+  "intro": "Hydro jetting around Medina's Public Square can clear grease, scale and roots from the drain lines of brick storefronts, restaurants and apartments above them."
+ },
+ {
+  "slug": "west-liberty-street",
+  "name": "West Liberty Street",
+  "title": "Hydro Jetting on West Liberty Street, Medina OH | Medina Hydro Jetting Pros",
+  "description": "Hydro jetting for West Liberty Street homes, converted offices and nearby commercial buildings in Medina, OH. Call (877) 761-0283.",
+  "hero": "Hydro jetting along West Liberty Street can clear grease, scale and roots from drain lines serving older homes turned offices, shops and nearby industrial buildings. Mixed use here means very different loads on lines of very different ages. A camera look before cleaning tells you what each property has.",
+  "bodyH2": "Hydro Jetting Along West Liberty Street",
+  "bodyPs": [
+   "The Beyond the Storefronts project notes that [[West Liberty was one of the first streets paved|http://www.medinasquare.org/west-liberty-streetnorth]] out from the square. The city's [[comprehensive plan|https://medinaoh.org/wp-content/uploads/2025/03/Comprehensive-Plan-9-12-22.pdf]] names the West Liberty Corridor as a focus area and says small multi-use zones along West Liberty, North Court, North Broadway and Washington Street allow older homes to be repurposed as businesses.",
+   "The Library of Congress record for [[Medina Public Square|https://tile.loc.gov/storage-services/master/pnp/habshaer/oh/oh2000/oh2020/data/oh2020data.pdf]] places the square's boundary along Liberty Street, so this corridor runs straight out from the historic center. A house turned office can keep residential pipe while carrying a different load. The same plan says industrial zones sit west of downtown, so some properties here may sit near heavier uses and some near homes.",
+   "Whatever the use, hydro jetting suits sound lines with buildup, and an inspection decides."
+  ],
+  "considerations": [
+   "Whether the building is a home, an office or an older house now used for business",
+   "Where the cleanout is",
+   "Trees along the street and near the lateral",
+   "Whether any recent change of use added fixtures",
+   "Which fixtures are affected",
+   "Whether neighboring properties see the same problem"
+  ],
+  "svcH2": "Hydro Jetting Services for West Liberty Street Properties",
+  "svcLead": "Pick the page that matches what your drain is doing.",
+  "svc": {
+   "severe-grease-and-sludge": "Kitchens in houses and break rooms can collect film, covered in {{svc:severe-grease-and-sludge|severe grease and sludge}}.",
+   "tree-root-intrusions": "Established trees near old laterals are covered in {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "For drains that keep slowing, see {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}}.",
+   "mineral-and-scale-deposits": "Scale is described in {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "For planned cleaning, read {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up in West Liberty Street",
+  "apps": [
+   {
+    "h": "Older houses used as offices",
+    "p": "Residential pipe serving an office can see more restroom use than it was built for."
+   },
+   {
+    "h": "Small shops and services",
+    "p": "Different businesses send different material down drains. Telling the crew helps."
+   },
+   {
+    "h": "Properties near industrial blocks",
+    "p": "Larger buildings can have longer, bigger lines that need different equipment."
+   },
+   {
+    "h": "Homes along the corridor",
+    "p": "Older homes may have older pipe and mature trees close to the lateral."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations in West Liberty Street",
+  "implPs": [
+   "A few questions are worth settling before the visit."
+  ],
+  "impl": [
+   {
+    "h": "Pipe condition",
+    "p": "A camera shows whether the line is sound.",
+    "b": [
+     "Request a camera look",
+     "Share repair notes",
+     "Plan repair if damage is found"
+    ]
+   },
+   {
+    "h": "Business access",
+    "p": "Pick a time that keeps the work area clear and confirm who can approve work.",
+    "b": [
+     "Choose a quiet time",
+     "Tell staff where the cleanout is",
+     "Confirm who approves"
+    ]
+   },
+   {
+    "h": "Public or private",
+    "p": "Cleaning a private line cannot repair a public sewer.",
+    "b": [
+     "Ask neighbors about the same backup",
+     "Note rain timing",
+     "Report widespread backups to the city"
+    ]
+   }
+  ],
+  "planH2": "How a West Liberty Street Visit Is Planned",
+  "planPs": [
+   "The order of a visit is simple."
+  ],
+  "steps": [
+   {
+    "t": "Describe the problem",
+    "d": "List the fixtures affected and when it began."
+   },
+   {
+    "t": "Find access",
+    "d": "Locate the cleanout or floor drain."
+   },
+   {
+    "t": "Inspect",
+    "d": "A camera shows the pipe and what is in it."
+   },
+   {
+    "t": "Clean",
+    "d": "Jet with a nozzle and pressure that fit the pipe."
+   },
+   {
+    "t": "Review",
+    "d": "Look again and decide on repair or a return visit."
+   }
+  ],
+  "mapH2": "West Liberty Street on the Map",
+  "mapIntro": "The map shows the area for orientation only. It does not mark a business or define neighborhood boundaries.",
+  "map": {
+   "lat": 41.1391,
+   "lon": -81.8727,
+   "d": 0.012,
+   "label": "Area map near West Liberty Street, Medina, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.88830%2C41.12710%2C-81.85710%2C41.15110&layer=mapnik"
+  },
+  "nearbyH2": "Other Medina Neighborhoods",
+  "nearbyP": "These pages cover the rest of the city.",
+  "faqs": [
+   {
+    "q": "Can an old house used as an office have more drain trouble?",
+    "a": "It can, since more people use pipe that was sized for a household."
+   },
+   {
+    "q": "Does a business need to tell the crew what goes down the drain?",
+    "a": "Yes. It affects how the line is cleaned."
+   },
+   {
+    "q": "Is hydro jetting safe on older pipe?",
+    "a": "On sound pipe it can be. A damaged section should be assessed first."
+   },
+   {
+    "q": "Will cleaning repair a broken pipe?",
+    "a": "No. Repair is separate."
+   },
+   {
+    "q": "Why does my basement drain back up first?",
+    "a": "It sits at the low point of the system."
+   },
+   {
+    "q": "Could the problem be the public sewer?",
+    "a": "If neighbors see the same backup, it may be. If only your property is affected, start with the private line."
+   },
+   {
+    "q": "What does a camera inspection show?",
+    "a": "Pipe material, joints, roots, deposits and damage."
+   },
+   {
+    "q": "How often should I clean?",
+    "a": "It depends on the cause."
+   },
+   {
+    "q": "Will one cleaning stop the problem for good?",
+    "a": "It clears the buildup present at that visit. Whether it returns depends on the cause."
+   },
+   {
+    "q": "What should I have ready?",
+    "a": "Your address, the affected fixtures, when it began and any repair notes."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting on West Liberty Street",
+  "ctaPs": [
+   "Describe the symptoms and anything you know about the line.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Medina County",
+  "city": "Medina",
+  "intro": "Hydro jetting along West Liberty Street can clear grease, scale and roots from drain lines serving older homes turned offices, shops and nearby industrial buildings."
+ },
+ {
+  "slug": "east-washington-street",
+  "name": "East Washington Street",
+  "title": "Hydro Jetting on East Washington Street, Medina OH | Medina Hydro Jetting Pros",
+  "description": "Hydro jetting for older homes along East Washington Street in Medina, OH, including historic houses near the downtown. Call (877) 761-0283.",
+  "hero": "Hydro jetting along East Washington Street can clear grease, scale and roots from drain lines serving older homes close to downtown. Some houses here date from the nineteenth century, so repairs and additions have often changed the line. A camera pass tells you what the pipe is before cleaning pressure is used.",
+  "bodyH2": "Hydro Jetting Along East Washington Street",
+  "bodyPs": [
+   "The National Register of Historic Places lists the [[H. G. Blake House at 314 East Washington Street|https://nationalregisterofhistoricplaces.com/oh/medina/state.html]] as a Greek Revival single dwelling. The Main Street Medina [[walking tour|https://www.mainstreetmedina.com/uploads/1/2/3/0/12308576/medina_historic_district_walking_tour_2018.pdf]] credits Mayor H. G. Blake with leading the rebuilding of the downtown after the 1870 fire. Houses near the square from that era have had many owners and many changes.",
+   "The city's [[comprehensive plan|https://medinaoh.org/wp-content/uploads/2025/03/Comprehensive-Plan-9-12-22.pdf]] says its largest residential district, low density residential, is concentrated south and east of downtown, and that small multi-use areas along Washington Street allow older homes to be repurposed as businesses.",
+   "A house of that age may combine old pipe with new fixtures. Jetting suits a sound line, and an inspection says whether yours is."
+  ],
+  "considerations": [
+   "The house's age and any pipe replacement",
+   "Whether the home is now an office or a rental",
+   "Large older trees near the lateral",
+   "Where the cleanout is",
+   "Whether exterior work would need city review",
+   "Which fixtures are affected"
+  ],
+  "svcH2": "Hydro Jetting Services for East Washington Street Properties",
+  "svcLead": "Pick the page that matches what your drain is doing.",
+  "svc": {
+   "severe-grease-and-sludge": "Older kitchens can have decades of film, covered in {{svc:severe-grease-and-sludge|severe grease and sludge}}.",
+   "tree-root-intrusions": "Mature trees are covered in {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "For drains that keep slowing, see {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}}.",
+   "mineral-and-scale-deposits": "Scale in older pipe is described in {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "To keep a line clear, read {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up in East Washington Street",
+  "apps": [
+   {
+    "h": "Historic houses",
+    "p": "A house from the nineteenth century has outlived several plumbing systems."
+   },
+   {
+    "h": "Houses turned businesses",
+    "p": "Offices in houses put more restroom load on residential pipe."
+   },
+   {
+    "h": "Large shade trees",
+    "p": "Large trees close to old laterals can send roots into joints."
+   },
+   {
+    "h": "Basement drains",
+    "p": "A floor drain that backs up first points to the main line."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations in East Washington Street",
+  "implPs": [
+   "A few questions are worth settling before the visit."
+  ],
+  "impl": [
+   {
+    "h": "Pipe condition",
+    "p": "A camera shows whether the line is sound.",
+    "b": [
+     "Request a camera look",
+     "Share repair notes",
+     "Plan repair if damage is found"
+    ]
+   },
+   {
+    "h": "Exterior work",
+    "p": "Cleaning inside a pipe does not change the outside of a building, but excavation can. Check with the city before digging on a historic property.",
+    "b": [
+     "Keep cleaning and repair separate",
+     "Ask the city first",
+     "Document findings"
+    ]
+   },
+   {
+    "h": "Public or private",
+    "p": "Cleaning a private line cannot repair a public sewer.",
+    "b": [
+     "Ask neighbors about the same backup",
+     "Note rain timing",
+     "Report widespread backups to the city"
+    ]
+   }
+  ],
+  "planH2": "How a East Washington Street Visit Is Planned",
+  "planPs": [
+   "The order of a visit is simple."
+  ],
+  "steps": [
+   {
+    "t": "Describe the problem",
+    "d": "List the fixtures affected and when it began."
+   },
+   {
+    "t": "Find access",
+    "d": "Locate the cleanout or floor drain."
+   },
+   {
+    "t": "Inspect",
+    "d": "A camera shows the pipe and what is in it."
+   },
+   {
+    "t": "Clean",
+    "d": "Jet with a nozzle and pressure that fit the pipe."
+   },
+   {
+    "t": "Review",
+    "d": "Look again and decide on repair or a return visit."
+   }
+  ],
+  "mapH2": "East Washington Street on the Map",
+  "mapIntro": "The map shows the area for orientation only. It does not mark a business or define neighborhood boundaries.",
+  "map": {
+   "lat": 41.1378,
+   "lon": -81.8599,
+   "d": 0.012,
+   "label": "Area map near East Washington Street, Medina, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.87550%2C41.12580%2C-81.84430%2C41.14980&layer=mapnik"
+  },
+  "nearbyH2": "Other Medina Neighborhoods",
+  "nearbyP": "These pages cover the rest of the city.",
+  "faqs": [
+   {
+    "q": "Do historic houses need special handling for jetting?",
+    "a": "Cleaning inside a pipe is not an exterior change. Digging may be."
+   },
+   {
+    "q": "Can roots from big shade trees reach my line?",
+    "a": "They can enter older joints."
+   },
+   {
+    "q": "Is hydro jetting safe on older pipe?",
+    "a": "On sound pipe it can be. A damaged section should be assessed first."
+   },
+   {
+    "q": "Will cleaning repair a broken pipe?",
+    "a": "No. Repair is separate."
+   },
+   {
+    "q": "Why does my basement drain back up first?",
+    "a": "It sits at the low point of the system."
+   },
+   {
+    "q": "Could the problem be the public sewer?",
+    "a": "If neighbors see the same backup, it may be. If only your property is affected, start with the private line."
+   },
+   {
+    "q": "What does a camera inspection show?",
+    "a": "Pipe material, joints, roots, deposits and damage."
+   },
+   {
+    "q": "How often should I clean?",
+    "a": "It depends on the cause."
+   },
+   {
+    "q": "Will one cleaning stop the problem for good?",
+    "a": "It clears the buildup present at that visit. Whether it returns depends on the cause."
+   },
+   {
+    "q": "What should I have ready?",
+    "a": "Your address, the affected fixtures, when it began and any repair notes."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting on East Washington Street",
+  "ctaPs": [
+   "Describe the symptoms and anything you know about the line.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Medina County",
+  "city": "Medina",
+  "intro": "Hydro jetting along East Washington Street can clear grease, scale and roots from drain lines serving older homes close to downtown."
+ },
+ {
+  "slug": "medfair-heights",
+  "name": "Medfair Heights",
+  "title": "Hydro Jetting at Medfair Heights, Medina OH | Medina Hydro Jetting Pros",
+  "description": "Hydro jetting for the Medfair Heights apartment area on North State Road in Medina, OH. Call (877) 761-0283.",
+  "hero": "Hydro jetting at Medfair Heights can clear grease, scale and roots from the shared drain lines of this wartime-era apartment community. Buildings with many units share stacks and building sewers, so one stoppage can touch many households. An inspection first shows where the blockage sits and how the pipe is holding up.",
+  "bodyH2": "Hydro Jetting for Medfair Heights Apartment Buildings",
+  "bodyPs": [
+   "The National Park Service lists the [[Medfair Heights Apartment Historic District at 221 North State Street|https://npgallery.nps.gov/AssetDetail/NRIS/08000624]], with 1943 as its significant year, the National Housing Agency among its architects and significance in architecture, community planning and social history. It was listed in 2008, one of [[five historic districts and places|https://nationalregisterofhistoricplaces.com/oh/medina/districts.html]] the register lists for Medina County.",
+   "Multi-building apartment complexes share drain infrastructure. A kitchen stack serves several units, and building sewers can carry the output of many households. A blockage low in a stack may show up in the lowest unit first, though its source may be several floors up.",
+   "Jetting can clear a sound shared line of grease and scale, and an inspection should come first, especially in buildings of this age. The [[city's brochure|https://medinaoh.org/wp-content/uploads/2025/03/Brochure-Architectural-Review-and-Historic-Preservation-in-Medina-Ohio.pdf]] covers the review process for locally designated properties, which does not apply automatically to every historic listing."
+  ],
+  "considerations": [
+   "Which units and buildings share the line",
+   "Where building cleanouts are",
+   "Whether the property manager or owner must approve access",
+   "Kitchen versus bathroom stacks",
+   "How many units are affected",
+   "Whether work could affect a nationally listed building's exterior"
+  ],
+  "svcH2": "Hydro Jetting Services for Medfair Heights Properties",
+  "svcLead": "Pick the page that matches what your drain is doing.",
+  "svc": {
+   "severe-grease-and-sludge": "Shared kitchen stacks collect film, covered in {{svc:severe-grease-and-sludge|severe grease and sludge}}.",
+   "tree-root-intrusions": "Trees on the grounds are covered in {{svc:tree-root-intrusions|tree root intrusions}}.",
+   "recurring-clogs-and-slow-drains": "For repeat slowdowns across units, see {{svc:recurring-clogs-and-slow-drains|recurring clogs and slow drains}}.",
+   "mineral-and-scale-deposits": "Scale in older pipe is described in {{svc:mineral-and-scale-deposits|mineral and scale deposits}}.",
+   "preventative-maintenance": "Property managers can plan routine cleaning with {{svc:preventative-maintenance|preventative maintenance}}."
+  },
+  "appsH2": "Where Hydro Jetting Comes Up in Medfair Heights",
+  "apps": [
+   {
+    "h": "Shared kitchen stacks",
+    "p": "One stack can serve several kitchens. A film building up on it slows every unit it connects."
+   },
+   {
+    "h": "Building sewers",
+    "p": "The line out of a building carries the load of all its units. Roots or scale there affect everyone."
+   },
+   {
+    "h": "Older buildings with long service lives",
+    "p": "Buildings from the 1940s have been maintained for decades. The pipe may have been patched at many points."
+   },
+   {
+    "h": "Common-area drains",
+    "p": "Laundry rooms and basement drains share the building line."
+   }
+  ],
+  "implH2": "Hydro Jetting Considerations in Medfair Heights",
+  "implPs": [
+   "A few questions are worth settling before the visit."
+  ],
+  "impl": [
+   {
+    "h": "Pipe condition",
+    "p": "A camera shows whether the line is sound.",
+    "b": [
+     "Request a camera look",
+     "Share repair notes",
+     "Plan repair if damage is found"
+    ]
+   },
+   {
+    "h": "Coordinating with residents",
+    "p": "Water may be shut off during work. The manager should notify residents.",
+    "b": [
+     "Tell the manager",
+     "Pick a time",
+     "Notify affected units"
+    ]
+   },
+   {
+    "h": "Public or private",
+    "p": "Cleaning a private line cannot repair a public sewer.",
+    "b": [
+     "Ask neighbors about the same backup",
+     "Note rain timing",
+     "Report widespread backups to the city"
+    ]
+   }
+  ],
+  "planH2": "How a Medfair Heights Visit Is Planned",
+  "planPs": [
+   "The order of a visit is simple."
+  ],
+  "steps": [
+   {
+    "t": "Describe the problem",
+    "d": "List the fixtures affected and when it began."
+   },
+   {
+    "t": "Find access",
+    "d": "Locate the cleanout or floor drain."
+   },
+   {
+    "t": "Inspect",
+    "d": "A camera shows the pipe and what is in it."
+   },
+   {
+    "t": "Clean",
+    "d": "Jet with a nozzle and pressure that fit the pipe."
+   },
+   {
+    "t": "Review",
+    "d": "Look again and decide on repair or a return visit."
+   }
+  ],
+  "mapH2": "Medfair Heights on the Map",
+  "mapIntro": "The map shows the area for orientation only. It does not mark a business or define neighborhood boundaries.",
+  "map": {
+   "lat": 41.1415,
+   "lon": -81.8795,
+   "d": 0.012,
+   "label": "Area map near Medfair Heights, Medina, Ohio",
+   "src": "https://www.openstreetmap.org/export/embed.html?bbox=-81.89510%2C41.12950%2C-81.86390%2C41.15350&layer=mapnik"
+  },
+  "nearbyH2": "Other Medina Neighborhoods",
+  "nearbyP": "These pages cover the rest of the city.",
+  "faqs": [
+   {
+    "q": "Who approves jetting in an apartment building?",
+    "a": "The owner or property manager."
+   },
+   {
+    "q": "Can one stoppage affect many units?",
+    "a": "Yes, if the blockage is on a shared line."
+   },
+   {
+    "q": "Is hydro jetting safe on older pipe?",
+    "a": "On sound pipe it can be. A damaged section should be assessed first."
+   },
+   {
+    "q": "Will cleaning repair a broken pipe?",
+    "a": "No. Repair is separate."
+   },
+   {
+    "q": "Why does my basement drain back up first?",
+    "a": "It sits at the low point of the system."
+   },
+   {
+    "q": "Could the problem be the public sewer?",
+    "a": "If neighbors see the same backup, it may be. If only your property is affected, start with the private line."
+   },
+   {
+    "q": "What does a camera inspection show?",
+    "a": "Pipe material, joints, roots, deposits and damage."
+   },
+   {
+    "q": "How often should I clean?",
+    "a": "It depends on the cause."
+   },
+   {
+    "q": "Will one cleaning stop the problem for good?",
+    "a": "It clears the buildup present at that visit. Whether it returns depends on the cause."
+   },
+   {
+    "q": "What should I have ready?",
+    "a": "Your address, the affected fixtures, when it began and any repair notes."
+   }
+  ],
+  "ctaH2": "Request Hydro Jetting at Medfair Heights",
+  "ctaPs": [
+   "Describe the symptoms and anything you know about the line.",
+   "Use the form or call to ask about your address."
+  ],
+  "kind": "hood",
+  "county": "Medina County",
+  "city": "Medina",
+  "intro": "Hydro jetting at Medfair Heights can clear grease, scale and roots from the shared drain lines of this wartime-era apartment community."
+ }
+]

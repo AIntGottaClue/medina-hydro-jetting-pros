@@ -6,14 +6,14 @@ import Img from '../../components/Img.astro';
 import { areas } from '../../data/content';
 const base = import.meta.env.BASE_URL;
 ---
-<Base title="Service Areas in Medina County, OH | Medina Hydro Jetting Pros" description="Hydro jetting line clearing across Medina, Brunswick, Wadsworth, Montville, Granger, Litchfield, Chippewa Lake, Seville, and Valley City, Ohio." path="service-areas/">
-  <Hero eyebrow="Coverage Map" title="Hydro Jetting Across Medina County, Ohio" lead="From the Medina square to the county line, we cover Medina, Ohio and the surrounding communities. Find yours below." chips={['9 Communities', 'Residential & Commercial']} location="Service Areas" />
+<Base title="Medina, OH Neighborhoods | Medina Hydro Jetting Pros" description="Hydro jetting in Medina, Ohio neighborhoods: Public Square, West Liberty Street, East Washington Street and Medfair Heights." path="service-areas/">
+  <Hero eyebrow="Neighborhoods" title="Hydro Jetting Across Medina, Ohio Neighborhoods" lead="From the Public Square Historic District to Medfair Heights, each neighborhood page covers what the local housing and buildings mean for drain lines." chips={['4 Neighborhoods', 'Residential & Commercial']} location="Neighborhoods" />
   <section><div class="wrap">
-    <div class="head"><p class="eyebrow">Where we jet</p><h2>Every community we cover.</h2></div>
-    <div class="grid g3">{areas.map((a) => <a class="card" href={base + 'service-areas/' + a.slug + '/'}><h3>{a.name}, Ohio</h3><p>{a.short}</p><span class="more">See {a.name}</span></a>)}</div>
+    <div class="head"><p class="eyebrow">Neighborhoods</p><h2>Medina neighborhoods.</h2></div>
+    <div class="grid g3">{areas.map((a) => <a class="card" href={base + 'service-areas/' + a.slug + '/'}><h3>{a.name}</h3><p>{(a.short || a.description)}</p><span class="more">See {a.name}</span></a>)}</div>
   </div></section>
   <section class="alt"><div class="wrap split">
-    <div><p class="eyebrow">Don't see your town?</p><h2>Near Medina? Call and ask.</h2><p>If you are close to Medina, there is a good chance you are in range. Call or send the form with your address and what your line is doing.</p></div>
+    <div><p class="eyebrow">Not sure which applies?</p><h2>Call and ask.</h2><p>Call or send the form with your address and what your line is doing.</p></div>
     <Img k="underground" cap="Roots cut back to the pipe wall" />
   </div></section>
   <Cta />

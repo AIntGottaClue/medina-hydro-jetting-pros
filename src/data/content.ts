@@ -50,7 +50,7 @@ export const process = [
   { n: '04', t: 'Verify', d: 'The camera runs again. You see the clean line for yourself.' },
 ];
 
-export const areas = [
+const oldAreas: any[] = [
   {
     slug: "medina", name: "Medina", kind: "City", image: "blueprint",
     short: "Camera-first line cleaning for homes and shops around the historic square and the neighborhoods beyond it.",
@@ -196,6 +196,9 @@ export const areas = [
     ],
   },
 ];
+import hoodData from './hoods.json';
+export const hoods: any[] = hoodData as any[];
+export const areas: any[] = [oldAreas[0], ...hoods];
 
 export const faqs = [
   ['What is hydro jetting?', 'Hydro jetting uses a high-pressure stream of water, up to 4000 PSI, fed through a specialized nozzle to scour the inside of a pipe. Instead of boring a small hole through a clog, the jet strips grease, sludge, scale, and roots off the pipe wall and flushes the debris out of the line.'],
@@ -205,7 +208,7 @@ export const faqs = [
   ['Can hydro jetting remove tree roots?', 'Yes. The jet cuts roots out of the line and scours them off the pipe wall. Roots can regrow toward moisture, so some lines need maintenance jetting.'],
   ['Do you clean commercial grease lines?', 'Yes. We jet kitchen lines, floor drains, and mop sink lines for restaurants and commercial facilities, either once or on a recurring schedule.'],
   ['Do I need a camera inspection before jetting?', 'We run the camera first on every job. It tells us what is in the line and what the pipe can take, and the second pass afterward shows the result.'],
-  ['Which areas do you serve?', 'Medina, Brunswick, Wadsworth, Montville Township, Granger Township, Litchfield, Chippewa Lake, Seville, and Valley City. If you are near Medina, call and ask.'],
+  ['Which areas do you serve?', 'We serve the city of Medina. Our neighborhood pages cover the Public Square Historic District, West Liberty Street, East Washington Street and Medfair Heights.'],
   ['Do you only do hydro jetting?', 'Yes. We focus on high-pressure water jetting and the camera work that supports it. We do not do pipe repair or replacement.'],
   ['How do I request service?', 'Call {{phone}} or send the form on any page. Tell us which drains are affected and what you have noticed.'],
 ];

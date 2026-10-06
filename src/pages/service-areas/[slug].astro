@@ -1,17 +1,24 @@
 ---
 import Base from '../../layouts/Base.astro';
+import HoodBody from '../../components/HoodBody.astro';
 import Hero from '../../components/Hero.astro';
 import Cta from '../../components/Cta.astro';
 import Img from '../../components/Img.astro';
-import { areas, services } from '../../data/content';
+import { areas } from '../../data/content';
 import { siteConfig as c } from '../../data/siteConfig';
+import { services } from '../../data/content';
 export function getStaticPaths() { return areas.map((a) => ({ params: { slug: a.slug }, props: { a } })); }
 const { a } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
 const others = areas.filter((x) => x.slug !== a.slug);
-const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: a.faq.map(([q, an]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: ph(an) } })) }];
+const isHood = !!a.bodyPs;
+const faqs = isHood ? a.faqs.map((f: any) => [f.q, f.a]) : a.faq;
+const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, an]: string[]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: ph(an) } })) }];
 ---
+{isHood ? (
+<Base title={a.title} description={a.description} path={`service-areas/${a.slug}/`} schema={schema}><HoodBody a={a} /></Base>
+) : (
 <Base title={`Hydro Jetting in ${a.name}, OH | Medina Hydro Jetting Pros`} description={`${a.short} Camera-verified drain and sewer jetting in ${a.name}, Ohio.`} path={`service-areas/${a.slug}/`} schema={schema}>
   <Hero eyebrow={`${a.kind} · Medina County, Ohio`} title={a.h1} lead={a.intro} chips={['Camera Verified', 'Up to 4000 PSI']} location={`${a.name}, OH`} />
   <section><div class="wrap">
@@ -27,7 +34,9 @@ const schema = [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEnti
   <section><div class="wrap">
     <div class="head"><p class="eyebrow">Local questions</p><h2>{a.name} questions.</h2></div>
     <div class="faq">{a.faq.map(([q, an], i) => <details open={i === 0}><summary>{q}</summary><p>{ph(an)}</p></details>)}</div>
-    <p style="margin-top:26px">Also serving: {others.map((o, i) => <><a href={base + 'service-areas/' + o.slug + '/'} style="color:var(--acc)">{o.name}</a>{i < others.length - 1 ? ', ' : '.'}</>)}</p>
+    <p style="margin-top:26px">Other pages: {others.map((o, i) => <><a href={base + 'service-areas/' + o.slug + '/'} style="color:var(--acc)">{o.name}</a>{i < others.length - 1 ? ', ' : '.'}</>)}</p>
   </div></section>
   <Cta />
 </Base>
+)}
+

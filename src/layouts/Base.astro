@@ -7,11 +7,11 @@ const { title, description, path, schema = [], noindex = false } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const url = (p: string) => base + p;
 const canonical = c.origin + '/' + path;
-const nav = [['Home', ''], ['Hydro Jetting', 'hydro-jetting/'], ['Services', 'services/'], ['Our Process', 'process/'], ['Service Areas', 'service-areas/'], ['FAQ', 'faq/'], ['Contact', 'contact/']];
+const nav = [['Home', ''], ['Hydro Jetting', 'hydro-jetting/'], ['Services', 'services/'], ['Our Process', 'process/'], ['Neighborhoods', 'service-areas/'], ['FAQ', 'faq/'], ['Contact', 'contact/']];
 const isActive = (p: string) => (p === '' ? path === '' : path.startsWith(p));
 const business = {
   '@context': 'https://schema.org', '@type': 'Plumber', name: c.brand, url: c.origin + '/', telephone: c.phoneHref,
-  areaServed: areas.map((a) => ({ '@type': 'City', name: a.name + ', Ohio' })),
+  areaServed: [{ '@type': 'City', name: 'Medina, Ohio' }],
   description: 'High-pressure hydro jetting and sewer camera inspection in Medina, Ohio.',
 };
 const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
@@ -52,8 +52,8 @@ const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
           if (label === 'Services') return (
             <div class="dd"><a class:list={[{ active: isActive(p) }]} href={url(p)}>Services</a>
               <div class="dd-menu">{services.map((s) => <a href={url(s.path)}>{s.name}</a>)}</div></div>);
-          if (label === 'Service Areas') return (
-            <div class="dd"><a class:list={[{ active: isActive(p) }]} href={url(p)}>Service Areas</a>
+          if (label === 'Neighborhoods') return (
+            <div class="dd"><a class:list={[{ active: isActive(p) }]} href={url(p)}>Neighborhoods</a>
               <div class="dd-menu cols">{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</div></div>);
           return <a class:list={[{ active: isActive(p) }]} href={url(p)}>{label}</a>;
         })}
@@ -68,7 +68,7 @@ const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
       <div class="wrap">
         {nav.map(([label, p]) => <a href={url(p)}>{label}</a>)}
         <details><summary>Services</summary>{services.map((s) => <a href={url(s.path)}>{s.name}</a>)}</details>
-        <details><summary>Service areas</summary>{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</details>
+        <details><summary>Neighborhoods</summary>{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</details>
         <a class="btn" href={'tel:' + c.phoneHref}>Call {c.phoneDisplay}</a>
       </div>
     </div>
@@ -81,7 +81,7 @@ const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
         <p>Specialized high-pressure hydro jetting drain and sewer line cleaning for residential and commercial properties in Medina, Ohio.</p>
       </div>
       <div><h4>Services</h4>{services.map((s) => <a href={url(s.path)}>{s.name}</a>)}{guides.map((g) => <a href={url(g.path)}>{g.name}</a>)}<a href={url('process/')}>Our Process</a></div>
-      <div><h4>Service Areas</h4>{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</div>
+      <div><h4>Neighborhoods</h4>{areas.map((a) => <a href={url('service-areas/' + a.slug + '/')}>{a.name}</a>)}</div>
       <div><h4>Contact</h4><a href={'tel:' + c.phoneHref}>{c.phoneDisplay}</a><span>Medina, Ohio</span><a href={url('faq/')}>FAQ</a><a href={url('contact/')}>Request service</a></div>
     </div>
     <div class="wrap legal"><span>&copy; 2026 {c.brand}. All rights reserved.</span><span><a href={url('privacy/')}>Privacy</a> <a href={url('terms/')}>Terms</a></span></div>
