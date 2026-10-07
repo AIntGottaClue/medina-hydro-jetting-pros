@@ -96,6 +96,13 @@ const ph = (s: string) => s.replaceAll('{{phone}}', c.phoneDisplay);
     (function(){var b=document.querySelector('[data-burger]'),m=document.querySelector('[data-mobile]');if(!b)return;
     b.addEventListener('click',function(){var o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',String(o));});})();
   </script>
+    <script is:inline>
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+        if (!a || typeof window.gtag !== 'function') return;
+        window.gtag('event', 'phone_call_tap', { page_path: location.pathname, link_url: a.getAttribute('href'), link_text: (a.textContent || '').trim().slice(0, 60) });
+      }, true);
+    </script>
 </body>
 </html>
 
